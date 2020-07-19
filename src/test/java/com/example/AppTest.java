@@ -7,8 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
+public class AppTest extends TestCase
 {
     /**
      * Create the test case
@@ -18,6 +17,9 @@ public class AppTest
     public AppTest( String testName )
     {
         super( testName );
+        String msg = "Hello World!";
+        App app = new App(msg);
+        assertEquals("Message: Hello World!", app.getMsg());
     }
 
     /**

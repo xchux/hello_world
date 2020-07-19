@@ -6,6 +6,19 @@ package com.example;
  */
 public class App{
     public static void main(String[] args){
-        System.out.println( "Hello World!" );
+        for (String msg: args) {
+            String message = new App(msg).getMsg();
+            System.out.println(message);
+        }
+    }
+
+    private final String msg;
+
+    public App(String msg) {
+        this.msg = msg;
+    }
+
+    public String getMsg() {
+         return "Message: " + msg;
     }
 }
